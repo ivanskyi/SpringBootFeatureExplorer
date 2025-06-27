@@ -60,3 +60,9 @@ Usually Hibernate (via `spring.jpa.hibernate.ddl-auto=update/create`) — automa
 
 10. **How does automatic table creation work in Testcontainers tests?**  
     Spring/Hibernate creates tables if `spring.jpa.hibernate.ddl-auto` is enabled.
+
+### Notes:
+- **`@SpringBootTest`** — creates a full Spring Boot application context for integration testing, including auto-configuration, beans, web environment, and more.
+- **`@Testcontainers`** — integrates the Testcontainers library to automatically start Docker containers (databases or message brokers) during test execution.
+- **`@DynamicPropertySource`** — dynamically adds or overrides configuration properties (`spring.datasource.url`) in the Spring context during test initialization.
+- **`DataSource`** — an interface for obtaining database connections; serves as an abstraction over JDBC and is typically backed by a connection pool.
