@@ -15,7 +15,7 @@ public class PageController {
     private final PageService pageService;
 
     @GetMapping("/{pageNumber}/name")
-    public String getPageName(@PathVariable("pageNumber") Integer pageNumber) {
+    public String getPageNameByNumber(@PathVariable("pageNumber") Integer pageNumber) {
         return pageService.getPageName(pageNumber);
     }
 }
